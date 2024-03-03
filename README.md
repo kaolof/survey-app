@@ -1,3 +1,25 @@
+# Installing Sail Into Existing Applications
+
+If you are interested in using Sail with an existing Laravel application, you may simply follow these steps:
+
+1. Install Sail using the Composer package manager:
+    ```bash
+    composer require laravel/sail --dev
+    ```
+
+2. After Sail has been installed, run the `sail:install` Artisan command. This command will publish Sail's `docker-compose.yml` file to the root of your application:
+    ```bash
+    php artisan sail:install
+    ```
+
+3. Finally, you may start Sail:
+    ```bash
+    ./vendor/bin/sail up
+    ```
+
+For more information on how to use Sail, please continue reading the remainder of this documentation.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
