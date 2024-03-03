@@ -44,14 +44,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    //Route::post('/save-response', [ResponseController::class, 'save'])->name('save.response');
-    //Route::get('admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-
-    /* Route::middleware('can:admin.dashboard')->get('/admin/dashboard', function () {
-    return Inertia::render('Admin/Dashboard');
-    })->name('admin.dashboard'); */
-
-    //Route::get('/admin/dashboard', [AdminController::class, 'index']);
 
     Route::get('/survey/{surveyId}/questions', [SurveyController::class, 'getQuestions'])->name('survey.questions');
     

@@ -10,18 +10,6 @@
           </p>
         </div>
         
-        <!-- <div class="row">
-          <div class="card shadow-sm bg-body-tertiary rounded col-md-11">
-            <div class="card-header">
-              Questions
-            </div>
-            <div class="card-body ">
-              
-            </div>
-          </div>
-
-        </div> -->
-        
         <graphics></graphics>
       </div>
       
