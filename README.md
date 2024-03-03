@@ -104,3 +104,40 @@ For more information on how to use Sail, please continue reading the remainder o
 
 For more information, refer to the [official documentation](https://laravel.com/docs/breeze).
 
+# Laravel Permission Installation
+
+## Installation
+
+1. **Consult Prerequisites**: Refer to the [Prerequisites page](link_to_prerequisites_page) for important considerations regarding your User models.
+
+2. **Composer Installation**: You can install the package via Composer:
+
+    ```bash
+    composer require spatie/laravel-permission
+    ```
+
+3. **Publish Migration and Config File**: Publish the migration and the `config/permission.php` config file:
+
+    ```bash
+    php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+    ```
+
+    Note: If you already have a `permission.php` file, you must rename or remove it.
+
+    Before running migrations, make sure you have completed any necessary steps mentioned in the Advanced section of the documentation for UUIDs.
+
+
+4. **Clear Configuration Cache**: Clear your config cache to ensure access to the permission config settings:
+
+    ```bash
+    php artisan optimize:clear
+    # or
+    php artisan config:clear
+    ```
+
+5. **Run Migrations**: After the config and migration have been published and configured, create the tables for this package by running:
+
+    ```bash
+    php artisan migrate
+    ```
+
