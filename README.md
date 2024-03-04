@@ -60,3 +60,8 @@ Before you begin, ensure you have the following installed on your local machine:
     ```bash
     php artisan migrate --seed
     ```
+10. Start npm
+
+    ```bash
+   npm run dev
+    ```
