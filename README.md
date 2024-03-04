@@ -67,11 +67,15 @@ If you are interested in using Sail with an existing Laravel application, you ma
     ```bash
     php artisan sail:install
     ```
-
-3. Finally, you may start Sail:
+3. Configure a shell alias for Sail:
     ```bash
-    ./vendor/bin/sail up
+    alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
     ```
+4. Finally, you may start Sail:
+    ```bash
+    sail up -d
+    ```
+
 
 For more information on how to use Sail, please continue reading the remainder of this documentation.
 
@@ -89,7 +93,7 @@ For more information on how to use Sail, please continue reading the remainder o
     ```bash
     php artisan breeze:install
     ```
-
+select Vue
 4. Run database migrations:
 
     ```bash
