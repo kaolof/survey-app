@@ -15,10 +15,10 @@ class ResponseSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 10; $i++) { // Cambia 100 por la cantidad de registros que deseas crear
+        for ($i = 0; $i < 40; $i++) { // Cambia 100 por la cantidad de registros que deseas crear
             Response::create([
                 'survey_id' => 1,
-                'user_id' => 2,
+                'user_id' => rand(1, 6),
                 'value' => rand(1, 5),
                 'question_id' => rand(1, 10),
             ]);
