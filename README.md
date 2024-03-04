@@ -91,13 +91,13 @@ For more information on how to use Sail, please continue reading the remainder o
 3. Scaffold your application with the Blade stack:
 
     ```bash
-    php artisan breeze:install
+    sail artisan breeze:install
     ```
 select Vue
 4. Run database migrations:
 
     ```bash
-    php artisan migrate
+    sail artisan migrate
     ```
 
 5. Install frontend dependencies and compile assets:
