@@ -88,19 +88,13 @@ For more information on how to use Sail, please continue reading the remainder o
     composer require laravel/breeze --dev
     ```
 
-3. Scaffold your application with the Blade stack:
-
-    ```bash
-    sail artisan breeze:install
-    ```
-select Vue
-4. Run database migrations:
+3. Run database migrations:
 
     ```bash
     sail artisan migrate
     ```
 
-5. Install frontend dependencies and compile assets:
+4. Install frontend dependencies and compile assets:
 
     ```bash
     npm install && npm run dev
