@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Role;
 use App\Models\User;
+use Spatie\Permission\Models\Permission;
 
 class UsersSeeder extends Seeder
 {
@@ -17,7 +18,8 @@ class UsersSeeder extends Seeder
     public function run()
     {
 
-        
+       Role::create(['name'=>'admin']);
+
         $adminUser = User::create([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
