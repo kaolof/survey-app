@@ -58,10 +58,15 @@ Before you begin, ensure you have the following installed on your local machine:
 9. To seed questions, responses and users
 
     ```bash
-    php artisan migrate --seed
+    sail artisan migrate --seed
     ```
 10. Start npm
 
     ```bash
-   npm run dev
+    npm run dev
     ```
+
+10. If you want to use the app as a admin user:
+    email: admin@example.com
+    password: 12345678
+`

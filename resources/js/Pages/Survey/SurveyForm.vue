@@ -1,6 +1,6 @@
 <template>
   <AuthenticatedLayout>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex flex-column align-items-center justify-content-center">
       <div class="container m-5" >
         <div class="row justify-content-center">
           <div class="col-md-7">
@@ -43,7 +43,7 @@
     
       <!-- Average Responses -->
     
-      <div v-if="viewGraphics" class="container m-5 justify-content-center row">
+      <div v-if="viewGraphics"  class="container m-5 justify-content-center row">
         <div class="p-3 mb-2 bg-success-subtle text-success-emphasis">You succesfully completed the survey. These are the average answers provided by all users in this app.</div>
         
         <graphics ></graphics>
