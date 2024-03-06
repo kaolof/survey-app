@@ -66,7 +66,7 @@ Before you begin, ensure you have the following installed on your local machine:
     sail npm run dev
     ```
 
-10. If you want to use the app as a admin user:
+10. If you want to use the app as admin user:
     email: admin@example.com
     password: 12345678
 `
