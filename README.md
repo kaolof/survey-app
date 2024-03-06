@@ -67,6 +67,8 @@ Before you begin, ensure you have the following installed on your local machine:
     ```
 
 10. If you want to use the app as admin user:
+
 email: admin@example.com
+
 password: 12345678
 `
