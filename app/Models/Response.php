@@ -19,13 +19,11 @@ class Response extends Model
         'survey_id',
     ];
 
-    // Relación con la tabla de preguntas
     public function question()
     {
         return $this->belongsTo(Question::class);
     }
 
-    // Relación con la tabla de usuarios
     public function user()
     {
         return $this->belongsTo(User::class);

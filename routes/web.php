@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\SurveyController;
 use App\Http\Controllers\ResponseController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GraphicsController;
 use App\Http\Controllers\DashboardController;
 
@@ -31,12 +30,9 @@ Route::get('/', function () {
     ]);
 });
 
-/* Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard'); */
 
 Route::middleware(['auth'])->group(function () {
-    // Ruta para el dashboard
+    
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
 

@@ -26,7 +26,7 @@ class ResponseController extends Controller
                 'survey_id' => $response['survey_id'],
                 'value' => $response['value'],
                 'question_id' => $response['question_id'],
-                'user_id' => auth()->id(), // Suponiendo que estás guardando el ID del usuario autenticado
+                'user_id' => auth()->id(), 
             ]);
         }
 

@@ -4,9 +4,6 @@ import { usePage } from '@inertiajs/vue3'
 const { props: { users } } = usePage();
 const { props: { responseUsers } } = usePage();
 const { props: { isAdmin } } = usePage();
-console.log(responseUsers); 
-console.log(users);
-console.log(isAdmin);
 
 const isUserResponded = (userId) => {
   return responseUsers.some(user => user.id === userId);

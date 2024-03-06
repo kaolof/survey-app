@@ -14,14 +14,10 @@
                   <div v-for="(question, index) in currentQuestions" :key="index" class="mt-4">
                     <p>{{ (currentPage - 1) * questionsPerPage + index + 1 }}) {{ question.question }}</p>
                     <select class="form-select" v-model="responses[question.id]" :name="'group'+(index + 1)" required @click="validateForm">
-                      <option disabled selected value="">Seleccione una opción</option>
+                      <option disabled selected value="">select an option</option>
                       <option v-for="value in [1, 2, 3, 4, 5]" :key="value" :value="value">{{ value }}</option>
                     </select>
-                    <!-- <div class="form-check form-check-inline m-2" v-for="value in [1, 2, 3, 4, 5]" :key="value">
-                        
-                        <input type="radio" :value="value" v-model="responses[question.id]" :name="'group'+(index + 1)" class="form-check-input">
-                        <label class="form-check-label">{{ value }}</label>
-                    </div> --> 
+                     
                   </div> 
                   
                 </form>
@@ -77,8 +73,6 @@ export default {
       responses[question.id] = null;
     });
 
-    //console.log(responses)
-
     const currentPage = ref(1);
     let disabledButton=ref(true);
     let viewGraphics=ref(false);
@@ -121,33 +115,27 @@ export default {
       let count=0;
       for (const i in this.responses) {
         
-        console.log(this.responses[i])
         
         if (this.responses[i] === null) {
           count++;
         }
       }
-    console.log('count '+count)
 
     if(count>0){
       this.disabledButton=true
-      console.log(this.disabledButton)
     }else{
       this.disabledButton=false
-      console.log(this.disabledButton)
     }
   },
     
     submit() {
 
-      //console.log(this.responses)
       this.viewGraphics=true;
       const formattedResponses = Object.entries(this.responses).map(([questionId, selectedValue]) => ({
         question_id: questionId,
         survey_id: 1,
         value: selectedValue
       }))
-      console.log(formattedResponses)
       router.post('/submit-form', formattedResponses)
       return redirect('/survey/1/questions');
     },
