@@ -11,6 +11,7 @@ Before you begin, ensure you have the following installed on your local machine:
 - [PHP](https://www.php.net/) (8)
 - [Composer](https://getcomposer.org/)
 - [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/download/current)
 
 ## Installation
 
