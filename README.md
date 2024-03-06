@@ -71,4 +71,4 @@ Before you begin, ensure you have the following installed on your local machine:
 email: admin@example.com
 
 password: 12345678
-`
+
